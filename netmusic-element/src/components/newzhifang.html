@@ -1,0 +1,53 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-190260364-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-190260364-1');
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Ads: 414492282 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-414492282"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-414492282');
+</script>
+
+<script>
+window.addEventListener("DOMContentLoaded", function(event) {
+    document.querySelectorAll("[onclick*='mailto']").forEach(function(item){
+        item.addEventListener('click', function(e){
+            gtag('event', 'conversion', {'send_to': 'AW-414492282/XxyMCK23n_cBEPrM0sUB'});
+            gtag('event', 'click', {'event_category': 'email'});
+        })
+    });  
+    if(document.querySelector("#inquiryform [type='Submit']") != null){
+        document.querySelector("#inquiryform [type='Submit']").addEventListener("click", function(e){
+           var name_ = document.querySelector("#inquiryform #contacts").value;
+           var email_ = document.querySelector("#inquiryform #email").value;
+           var msg_ = document.querySelector("#inquiryform #inquiry").value;
+           var vrcode_ = document.querySelector("#inquiryform #code").value;
+           if(name_!="" && email_!="" && msg_!="" && vrcode_!=""){
+                gtag('event', 'conversion', {'send_to': 'AW-414492282/46hWCIm9n_cBEPrM0sUB'});
+                gtag('event', 'send', {'event_category': 'form'});
+           }
+        })
+    }
+    if(document.querySelector("#feedbackform [type='Submit']") != null){
+        document.querySelector("#feedbackform [type='Submit']").addEventListener("click", function(e){
+           var name_ = document.querySelector("#feedbackform #contacts").value;
+           var email_ = document.querySelector("#feedbackform #email").value;
+           var msg_ = document.querySelector("#feedbackform #feedback").value;
+           var vrcode_ = document.querySelector("#feedbackform #code").value;
+           if(name_!="" && email_!="" && msg_!="" && vrcode_!=""){
+                gtag('event', 'conversion', {'send_to': 'AW-414492282/46hWCIm9n_cBEPrM0sUB'});
+                gtag('event', 'send', {'event_category': 'form'});
+           }
+        })
+    }
+})
+</script>
